@@ -1,0 +1,16 @@
+<h1>Hola</h1>
+<h2>{{titulo}}</h2>
+<h2>{{comentario}}</h2>
+<h2>{{year}}</h2>
+<p [style.background]="edad  >= 18 ? 'green' : 'red'">
+  {{edad}}
+</p>
+<button (click)="aumentarEdad()">Aumentar Edad</button>
+<button (click)="disminuirEdad()">Disminuir Edad</button>
+
+<h2>Lista de nombres</h2>
+<ul>
+  <li *ngFor="let nombre of nombres">
+{{nombre}}
+  </li>
+</ul>
