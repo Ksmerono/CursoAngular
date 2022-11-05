@@ -1,3 +1,4 @@
+import { getLocaleDayPeriods } from "@angular/common";
 import { Component, OnInit  } from "@angular/core";
 
 @Component({
@@ -14,7 +15,7 @@ export class MiComponente implements OnInit {
     public year: number= 0;
     public edad:number= 18;
     public nombres:Array<string>;
-
+    private miedad = 20;
 
 
 
@@ -35,7 +36,15 @@ export class MiComponente implements OnInit {
       if (this.edad > 0){
         this.edad--;
       }
+    }
 
+    getMiedad(){
+      return this.miedad;
+    }
+
+    setMiedad(e:string){
+      let ed: number = +e;
+      this.miedad = ed;
     }
 
 

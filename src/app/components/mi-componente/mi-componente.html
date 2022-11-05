@@ -11,6 +11,23 @@
 <h2>Lista de nombres</h2>
 <ul>
   <li *ngFor="let nombre of nombres">
-{{nombre}}
+  {{nombre}}
   </li>
 </ul>
+
+<p>Mi edad real es {{getMiedad()}}</p>
+<p>{{getMiedad()<18 ? "Menor de edad":"Mayor de edad"}}</p>
+
+
+<form action="post">
+  <label for="">edad:</label>
+  <input type="number" name="edades" #edadi>
+  <br>
+  <input type="button" value="dale" (click)="setMiedad(edadi.value)">
+</form>
+<p>me llamo:{{nombrecito.value}}</p>
+
+<form action="">
+  <label for="">Nombre:</label>
+  <input type="text" #nombrecito (keyup)="3">
+</form>
