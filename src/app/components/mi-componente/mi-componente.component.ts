@@ -16,8 +16,21 @@ export class MiComponente implements OnInit {
     public edad:number= 18;
     public nombres:Array<string>;
     private miedad = 20;
+    nombreCuadro = true;
+    checkBox = false;
 
+    setNombreCuadro(){
+      if(this.checkBox == false){
+        this.nombreCuadro = false;
+        console.log(this.nombreCuadro,this.checkBox);
+        this.checkBox = true;
+      }else{
+        this.nombreCuadro = true;
+        console.log(this.nombreCuadro,this.checkBox);
+        this.checkBox = false;
+      }
 
+    }
 
     constructor(){
         this.titulo = "Mi componente rechulon"
@@ -43,8 +56,7 @@ export class MiComponente implements OnInit {
     }
 
     setMiedad(e:string){
-      let ed: number = +e;
-      this.miedad = ed;
+      this.miedad = Number(e);
     }
 
 
